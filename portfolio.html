@@ -295,8 +295,8 @@
 
     .screenshot-ph {
       flex-shrink: 0;
-      width: 90px;
-      height: 160px;
+      width: 150px;
+      height: 320px;
       border-radius: 10px;
       background: var(--border);
       border: 1px dashed color-mix(in srgb, var(--accent) 30%, var(--border));
@@ -308,6 +308,15 @@
       text-transform: uppercase;
       color: var(--muted);
       transition: background var(--transition), border-color var(--transition);
+      overflow: hidden;
+    }
+
+    .screenshot-ph img,
+    .screenshot-ph video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
     }
 
     /* ── skills grid ── */
@@ -456,9 +465,9 @@
   <header>
     <p class="eyebrow">iOS Developer · NYC</p>
     <h1>Kadie.<br></h1>
-    <p class="bio">
+    <!-- <p class="bio">
       iOS engineer specializing in <strong>Swift, SwiftUI,</strong> and <strong>Objective-C</strong>.
-    </p>
+    </p> -->
     <div class="header-links">
       <a href="https://linkedin.com/in/kadie-weber" target="_blank">LinkedIn</a>
       <a href="https://github.com/kadie-weber" target="_blank">GitHub</a>
@@ -475,32 +484,39 @@
       <div class="card">
         <div class="card-header">
           <div>
-            <div class="card-title">YourAppName</div>
+            <div class="card-title">Parakeet Voice Toolkit</div>
             <div class="card-role">Sole Developer · Design · Engineering</div>
           </div>
         </div>
 
         <div class="screenshot-strip">
-          <div class="screenshot-ph">Screen 1</div>
-          <div class="screenshot-ph">Screen 2</div>
-          <div class="screenshot-ph">Screen 3</div>
-          <div class="screenshot-ph">Screen 4</div>
+          <div class="screenshot-ph">
+            <video autoplay muted loop>
+              <source src="assets/parakeet-flow.mov" type="video/mp4" />
+            </video>
+          </div>
+          <div class="screenshot-ph">
+            <img src="assets/parakeet-speech-detected.png" />
+          </div>
+          <div class="screenshot-ph">
+            <img src="assets/parakeet-passthrough.png" />
+          </div>
+          <div class="screenshot-ph">
+            <img src="assets/parakeet-play-tab.png" />
+          </div>
         </div>
 
         <p class="card-desc">
-          <!-- TODO: Replace with your app's description. What does it do? Who uses it? What problem does it solve? -->
-          A [category] app for [audience] that [core value prop]. Built entirely solo —
+          A collection of tools for working on your voice. Built solo —
           from concept and design through App Store submission. Currently at
-          [X]+ downloads with a [X.X]★ rating.
+          10k+ downloads and 1.4k MAU.
         </p>
         <div class="tags">
           <span class="tag">SwiftUI</span>
-          <span class="tag">SwiftData</span>
-          <span class="tag">CloudKit</span>
+          <span class="tag">AVFoundation</span>
           <span class="tag">App Store Connect</span>
-          <!-- TODO: Add your actual stack -->
         </div>
-        <a class="card-link" href="https://apps.apple.com/app/idXXXXXXXXX" target="_blank">
+        <a class="card-link" href="https://apps.apple.com/app/id6447527699" target="_blank">
           View on App Store
           <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
         </a>
@@ -520,28 +536,30 @@
         <div class="card-header">
           <div>
             <div class="card-title">The Wall Street Journal</div>
-            <div class="card-role">iOS Engineer · [Start Year – End Year]</div>
+            <div class="card-role">iOS Engineer</div>
           </div>
         </div>
         <div class="screenshot-strip">
-          <div class="screenshot-ph">Screen 1</div>
-          <div class="screenshot-ph">Screen 2</div>
+          <div class="screenshot-ph">
+            <video autoplay muted loop>
+              <source src="assets/wsj-voiceover.mov" type="video/mp4" />
+            </video>
+          </div>
         </div>
         <p class="card-desc">
-          <!-- TODO: Describe 2–3 specific contributions at a high level. E.g.: -->
-          Contributed to the WSJ iOS app, focusing on [area — e.g. article reader, push notifications, 
-          offline mode]. Shipped [feature or improvement] that [impact, if shareable]. 
-          Collaborated with a cross-functional team of [X] engineers.
+          Contributed to the WSJ iOS app, focusing on Accessiblity and User Experience.
+          Shipped VoiceOver refactors across the app that made articles, video players, and market data accessible for vision impaired users.
+          Collaborated with several cross-functional teams to build out social media embeds.
         </p>
         <div class="tags">
-          <span class="tag">Swift</span>
-          <span class="tag">Objective-C</span>
-          <!-- TODO: Fill in your actual stack here -->
+          <span class="tag">SwiftUI</span>
+          <span class="tag">Apollo GraphQL</span>
+          <span class="tag">WebKit</span>
         </div>
       </div>
 
       <!-- Showpad -->
-      <div class="card">
+      <!-- <div class="card">
         <div class="card-header">
           <div>
             <div class="card-title">Showpad</div>
@@ -553,7 +571,6 @@
           <div class="screenshot-ph">Screen 2</div>
         </div>
         <p class="card-desc">
-          <!-- TODO: Same framing — your contributions, not the whole product. -->
           Worked on the Showpad iOS app, a sales enablement platform. Owned [feature area —
           e.g. content viewer, offline sync, presentation mode]. Improved [metric or experience] 
           by [approach].
@@ -561,33 +578,38 @@
         <div class="tags">
           <span class="tag">Swift</span>
           <span class="tag">UIKit</span>
-          <!-- TODO: Fill in your actual stack here -->
         </div>
-      </div>
+      </div> -->
 
-      <!-- Game Streaming App -->
+      <!-- Allstar Gaming -->
       <div class="card">
         <div class="card-header">
           <div>
-            <div class="card-title">Video Game Streaming App</div>
-            <div class="card-role">iOS Engineer · [Company / Dates]</div>
+            <div class="card-title">Allstar.gg</div>
+            <div class="card-role">iOS Engineer</div>
           </div>
         </div>
         <div class="screenshot-strip">
-          <div class="screenshot-ph">Screen 1</div>
-          <div class="screenshot-ph">Screen 2</div>
+          <div class="screenshot-ph">
+            <img src="assets/allstar-lol.png" />
+          </div>
+          <div class="screenshot-ph">
+            <img src="assets/allstar-profile.png" />
+          </div>
+          <div class="screenshot-ph">
+            <video autoplay muted loop>
+              <source src="assets/allstar-live-profile.mp4" type="video/mp4" />
+            </video>
+          </div>
         </div>
         <p class="card-desc">
-          <!-- TODO: Describe the parts you built. If not public, use mockups or remove screenshots. -->
-          Contributed key UI components to a video game streaming app — including [e.g. the 
-          channel browser, player controls, live chat overlay]. Focused on performance and 
-          smooth 60fps rendering under real-time data conditions.
+          Delivered a profile revamp to a video game streaming app, among other features.
         </p>
         <div class="tags">
           <span class="tag">SwiftUI</span>
           <span class="tag">AVFoundation</span>
-          <span class="tag">WebSocket</span>
-          <!-- TODO: Fill in your actual stack here -->
+          <span class="tag">Core Data</span>
+          <span class="tag">GraphQL</span>
         </div>
       </div>
 
@@ -604,8 +626,8 @@
       <div class="skill-item">SwiftUI</div>
       <div class="skill-item">UIKit</div>
       <div class="skill-item">Objective-C</div>
-      <div class="skill-item">SwiftData</div>
       <div class="skill-item">Core Data</div>
+      <div class="skill-item">SwiftData</div>
       <div class="skill-item">CloudKit</div>
       <div class="skill-item">XCTest</div>
       <div class="skill-item">Instruments</div>
@@ -622,10 +644,10 @@
   <section>
     <p class="section-label">Get in Touch</p>
     <div class="contact-row">
-      <a class="contact-pill" href="/cdn-cgi/l/email-protection#d5acbaa095b0adb4b8a5b9b0fbb6bab8">
+      <!-- <a class="contact-pill" href="/cdn-cgi/l/email-protection#d5acbaa095b0adb4b8a5b9b0fbb6bab8">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
         <span class="__cf_email__" data-cfemail="b8c1d7cdf8ddc0d9d5c8d4dd96dbd7d5">[email&#160;protected]</span>
-      </a>
+      </a> -->
       <a class="contact-pill" href="https://linkedin.com/in/yourhandle" target="_blank">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
         LinkedIn
